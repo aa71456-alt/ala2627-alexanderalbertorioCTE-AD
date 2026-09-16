@@ -1,0 +1,140 @@
+:root {
+  --bg-dark: #0b1020;
+  --bg-mid: #1a2342;
+  --card: rgba(14, 22, 38, 0.9);
+  --card-border: rgba(128, 175, 255, 0.4);
+  --accent: #7ef9ff;
+  --accent-2: #8d7dff;
+  --text: #edf6ff;
+  --muted: #c6d5f3;
+  --success: #7cffb7;
+  --shadow: rgba(6, 10, 20, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: radial-gradient(circle at top, var(--bg-mid), var(--bg-dark));
+  color: var(--text);
+  display: grid;
+  place-items: center;
+  padding: 32px 16px;
+}
+
+.container {
+  width: min(780px, 92vw);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 22px;
+  padding: 26px 24px;
+  box-shadow: 0 18px 45px var(--shadow);
+  margin-bottom: 20px;
+}
+
+.hero-card {
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+}
+
+.subtitle {
+  margin: 14px auto 0;
+  max-width: 560px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.quote-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.quote {
+  margin: 0;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.thumb-btn {
+  align-self: flex-start;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #07111f;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 14px 20px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 12px 28px rgba(126, 249, 255, 0.22);
+}
+
+.thumb-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.thumb-btn.selected {
+  background: linear-gradient(135deg, var(--success), var(--accent));
+  box-shadow: 0 12px 28px rgba(124, 255, 183, 0.25);
+}
+
+.icon {
+  font-size: 1.3rem;
+}
+
+.status {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+h2 {
+  margin: 0 0 12px;
+  font-size: 1.5rem;
+}
+
+pre {
+  background: rgba(7, 16, 31, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 18px;
+  color: #dfefff;
+  overflow-x: auto;
+  line-height: 1.8;
+}
+
+.explain {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+strong {
+  color: var(--text);
+}
